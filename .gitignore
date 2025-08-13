@@ -1,0 +1,9 @@
+/downloads
+.env
+*log
+/state
+/logs
+*.env
+*.env1
+*.env_renewaldata
+*/mnt/data_sdd/energy_gpt/energy_scraper/slack.py

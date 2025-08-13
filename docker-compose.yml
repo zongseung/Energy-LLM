@@ -1,0 +1,31 @@
+services:
+  scraper_naver:
+    build: .
+    image: energy_gpt
+    container_name: energy_gpt_naver
+    env_file:
+      - .env
+    environment:
+      - TZ=Asia/Seoul
+      - DOWNLOAD_DIR=/app/downloads/naver
+      - STATE_DIR=/app/state/naver
+    volumes:
+      - /mnt/data_sdd/energy_gpt/downloads/naver:/app/downloads/naver
+      - ./logs:/app/logs
+      - ./state/naver:/app/state/naver
+    command: ["--site", "naver", "--pages", "5"]
+
+  scraper_petro:
+    image: energy_gpt
+    container_name: energy_gpt_petro
+    env_file:
+      - .env1
+    environment:
+      - TZ=Asia/Seoul
+      - DOWNLOAD_DIR=/app/downloads/petronet
+      - STATE_DIR=/app/state/petronet
+    volumes:
+      - /mnt/data_sdd/energy_gpt/downloads/petronet:/app/downloads/petronet
+      - ./logs:/app/logs
+      - ./state/petronet:/app/state/petronet
+    command: ["--site", "petronet", "--full"]

@@ -1,0 +1,20 @@
+[project]
+name = "energy-gpt"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "chromadb>=1.0.16",
+    "dotenv>=0.9.9",
+    "kss>=6.0.5",
+    "pdf2image>=1.17.0",
+    "pillow>=11.3.0",
+    "pymongo>=4.14.0",
+    "pymupdf>=1.26.3",
+    "pypdf>=6.0.0",
+    "pytesseract>=0.3.13",
+    "python-dotenv>=1.1.1",
+    "sentence-transformers>=5.1.0",
+    "tqdm>=4.67.1",
+]
