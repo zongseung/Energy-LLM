@@ -1,6 +1,8 @@
 ### NAS 마운트 방법
   - sudo mount -t cifs //ip/naverResearch /mnt/data_sdd/energy_gpt/nas-mount/naverDB \
--o username=사용자명,password='비밀번호',vers=3.0,uid=$(id -u),gid=$(id -g),file_mode=0777,dir_mode=0777| 옵션               | 의미                                                |
+-o username=사용자명,password='비밀번호',vers=3.0,uid=$(id -u),gid=$(id -g),file_mode=0777,dir_mode=0777
+
+  - 뒷 코드 정보에 대한 부분은 표로 정리한다.
 
 | 옵션               | 의미                                                |
 | ---------------- | ------------------------------------------------- |
@@ -12,4 +14,5 @@
 
   - `모든 작업은 sudo unmount <NAS 주소>`으로 하고 추가 작업을 진행한다. 안그러면 NAS가 인식을 잘못하여 차단 IP 로 설정해버린다.
   - 
+
 
